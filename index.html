@@ -10,13 +10,8 @@
 <body>
  <!--https://script.google.com/macros/s/AKfycbwQxVxgrNPqAzP7YIaATJbylIUjgIx-sDuqw_ps/exec -->
  <h2 class="content-head is-center">Contact Us!</h2>
-  <aside>
-       <p>
-           We would <em>love</em> to hear from you! </p>
-           <p>Please use the <b><em>Contact Form</em></b>
-           to send us a message.
-       </p>
-   </aside>
+  <p>We have gone paperless for this wedding. #savethetrees :) Please use the form below to RSVP!</p>
+  <p>Be sure to submit a separate entry if multiple people are in your party. You can still use the same email.</p>
 
 <!-- START HERE -->
    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
@@ -25,33 +20,33 @@
    <link rel="stylesheet" href="style.css">
 
   <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
-  action="https://script.google.com/macros/s/AKfycbwMxYDrufp73bKdU8gMvxFDdHRuzcR4IKQUB33B7GqwyfyZS04/exec">
+  action="https://script.google.com/macros/s/AKfycbxbOF1cxRbqN4VFjmZXHLKBMA0k2t9CSZaAF298RQ/exec">
     <!-- change the form action to your script url -->
 
     <div class="form-elements">
       <fieldset class="pure-group">
         <label for="name">Name: </label>
-        <input id="name" name="name" placeholder="What your Mom calls you" />
+        <input id="name" name="name" placeholder="" />
       </fieldset>
 
       <fieldset class="pure-group">
-        <label for="message">Message: </label>
-        <textarea id="message" name="message" rows="10"
-        placeholder="Tell us what's on your mind..."></textarea>
+        <label for="rsvp">Will you be able to attend our wedding? </label>
+        <textarea id="rsvp" name="rsvp" rows="2"
+        placeholder="Yes/No"></textarea>
       </fieldset>
 
       <fieldset class="pure-group">
         <label for="email"><em>Your</em> Email Address:</label>
         <input id="email" name="email" type="email" value=""
-        required placeholder="your.name@email.com"/>
+        required placeholder="xxx@email.com"/>
       </fieldset>
 
       <fieldset class="pure-group">
-        <label for="color">Favourite Color: </label>
-        <input id="color" name="color" placeholder="green" />
+      	<label for="dietary">Dietary Restrictions</label>
+      	<textarea id="dietary" name="dietary" type="dietary" placeholder="vegetarian, nut allergies, etc" value="">
       </fieldset>
 
-      <fieldset class="pure-group honeypot-field">
+      <fieldset class="pure-group honeypot-field" style="display: none;">
         <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
         <input id="honeypot" type="text" name="honeypot" value="" />
       </fieldset>
