@@ -1,5 +1,20 @@
+/*body styles
+typography
+buttons and links
+header/nav
+content by section
+forms
+footer
+mobile*/
+
+/*-----------------------------------------------
+BODY
+------------------------------------------------*/
 body {
   margin: 2em;
+}
+body,html{
+  height:100%;
 }
 aside {
     background: #1f8dd6; /* same color as selected state on site menu */
@@ -8,6 +23,59 @@ aside {
     color: #fff;
     margin-bottom: 2em;
 }
+/*-----------------------------------------------
+SHeader/Navigation
+------------------------------------------------*/
+.nav{
+  overflow:hidden;
+  position:fixed;
+  top:10px;
+  width: 100%;
+}
+
+.nav-item {
+  font-family: 'Radley', serif;
+  text-transform: uppercase;
+  padding:0px 20px;
+}
+
+.nav .nav-item{
+  float:left;
+  display:block;
+  text-align:center;
+}
+/*-----------------------------------------------
+Section 1 - Landing
+------------------------------------------------*/
+#section-one {
+  height:100%;
+}
+#section-one .home-hero{
+  background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/tseung-proposal-6.jpg");
+  height:50%;
+
+  background-position:top center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  position:relative;
+  min-height:100%;
+}
+
+.hero-text{
+  text-align:center;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color:white;
+}
+.hero-text p {
+  font-family:"Sudestada";
+  font-size:200px;
+}
+/*-----------------------------------------------
+Section 3 - RSVP form
+------------------------------------------------*/
 textarea {
   width: 100%;
 }
@@ -38,3 +106,11 @@ button {
 /*.honeypot-field {
   display: none;
 }*/
+
+/*-----------------------------------------------
+Footer
+------------------------------------------------*/
+
+/*-----------------------------------------------
+Mobile
+------------------------------------------------*/
