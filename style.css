@@ -20,7 +20,7 @@ BRAND COLORS
 BODY
 ------------------------------------------------*/
 body {
-  margin: 2em;
+/*  margin: 2em;*/
 }
 body,html{
   height:100%;
@@ -59,10 +59,26 @@ SHeader/Navigation
   padding:0px 20px;
 }
 
-.nav .nav-item{
+/*.nav .nav-item{
   float:left;
   display:block;
   text-align:center;
+}*/
+.fixed-top{
+    height: 120px;
+    background-color: none!important;
+    width: 90%;
+    margin:  0 auto;
+}
+.navbar-light .navbar-nav .nav-link{
+    font-size: 1.1em;
+    color: #fff;
+    letter-spacing: 2px;
+    transition: all 300ms
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+    opacity: 0.6;
+    color: #fff;
 }
 /*-----------------------------------------------
 Section 1 - Landing
@@ -82,17 +98,34 @@ Section 1 - Landing
 }
 
 .hero-text{
-  
+  width: 100%;
+  max-width: 750px;
+  height: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 53%;
+  left: 50%;
 }
 .hero-text p {
   font-family:"Sudestada";
-  font-size:200px;
-  text-align:center;
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  color:white;
+  line-height: 1;
+  margin: 0;
+  text-align: left;
+  display:flex;
+  justify-content: flex-start;
+  width: 100%;
+  transform: rotate(352deg);
+  height: 180px;
+  font-size: 13em;
+  color: #fff;
+}
+.hero-text p:nth-child(2){
+    justify-content: center;
+}
+.hero-text p:nth-child(3){
+    justify-content: flex-end;
 }
 /*-----------------------------------------------
 Section 2 - Info
@@ -110,6 +143,11 @@ Section 2 - Info
   height:auto;
 
 }
+.section-two-image-wrap img {
+    -webkit-box-shadow: -20px 22px 0px 0px rgba(99,7,22,1);
+    -moz-box-shadow: -20px 22px 0px 0px rgba(99,7,22,1);
+    box-shadow: -35px 37px 0px 0px rgba(99,7,22,1);
+}
 
 #section-two h2{
   font-size:6em;
@@ -125,6 +163,9 @@ Section 2 - Info
 }
 #section-two .desc-text{
   vertical-align:bottom;
+}
+#section-two .row {
+    align-items: flex-end;
 }
 
 /*-----------------------------------------------
@@ -172,3 +213,29 @@ Footer
 /*-----------------------------------------------
 Mobile
 ------------------------------------------------*/
+@media only screen and (max-width: 1200px){
+    .hero-text p{
+        font-size: 9em;
+        height: 150px;
+    }
+    .hero-text{
+        max-width: 600px;
+    }
+    .navbar-light .navbar-nav .nav-link{
+        font-size: 0.8em;
+    }
+}
+@media only screen and (max-width: 990px){
+    .hero-text{
+        max-width: 500px;
+    }
+}
+@media only screen and (max-width: 768px){
+
+}
+@media only screen and (max-width: 600px){
+
+}
+@media only screen and (max-width: 500px){
+
+}
