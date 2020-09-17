@@ -58,22 +58,38 @@
 		<!--dont forget to add the background image-->
 		<div class="home-hero">
 			<div class="inner-wrap hero-text">
-				<p>zepheniah<br>&<br>hester</p>
+				<p>zepheniah</p>
+				<p>&</p>
+				<p>hester</p>
 			</div>
 		</div>
 	</div>
 	<!--we're getting married!-->
 	<div id="section-two" class="wrap">
 		<div class="inner-wrap">
-			<div class="left"> <img src='' alt-text="wedding picture">
+			<div class="container">
+				<div class="row">
+					<div class = "col-5">
+						<div class = "section-two-image-wrap">
+							<img src='images\pinkivywall.jpg' alt-text="wedding picture">
+						</div>
+						<div class="rectangle"> </div>
+					</div>
+					<div class = "col-7 desc-text">
+						<h2>we're getting married</h2>
+						<h3>FEBRUARY 13, 2021</h3>
+						<h3>FROM 4-10 PM AT THE GRAND IVORY</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- just commented out bc idk hehe<div class="left"> <img src='images\pinkivywall.jpg' alt-text="wedding picture">
 				<div class="rectangle"> </div>
 			</div>
 			<div class="right">
-				<h2>we're getting married</h2>
-				<h3>February 13, 2021</h3>
-				<h3>From 4-10 PM at the Grand Ivory</h3>
-				<p>Paragraph blah blah here</p>
-			</div>
+				
+			</div>-->
 		</div>
 	</div>
 	<!--https://script.google.com/macros/s/AKfycbwQxVxgrNPqAzP7YIaATJbylIUjgIx-sDuqw_ps/exec -->
@@ -81,20 +97,20 @@
 	<p>Kindly Respond by January 21, 2021</p>
 	<!-- rsvp form -->
 	<div id= section-three class=wrap>
-		<form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbxbOF1cxRbqN4VFjmZXHLKBMA0k2t9CSZaAF298RQ/exec">
+		<form class="gform pure-form" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbxbOF1cxRbqN4VFjmZXHLKBMA0k2t9CSZaAF298RQ/exec">
 			<!-- change the form action to your script url -->
 			<div class="form-elements">
 				<fieldset class="pure-group">
 					<label for="name">Name</label>
-					<input id="name" name="name" placeholder="" /> </fieldset>
-				<fieldset class="pure-group">
+					<input id="name" name="name" placeholder="" />
+
 					<label for="email"><em>Your</em> Email </label>
-					<input id="email" name="email" type="email" value="" required placeholder="xxx@email.com" /> </fieldset>
+					<input id="email" name="email" type="email" value="" required placeholder="xxx@email.com" />
+				</fieldset>
 				<fieldset class="pure-group">
 					<label for="rsvp">Number Attending (including yourself)</label>
 					<textarea id="rsvp" name="rsvp" rows="2" placeholder="Yes/No"></textarea>
-				</fieldset>
-				<fieldset class="pure-group">
+
 					<label for="dietary">Dietary Restrictions?</label>
 					<textarea id="dietary" name="dietary" type="dietary" placeholder="vegetarian, nut allergies, etc" value="" rows="4"></textarea>
 				</fieldset>

@@ -5,7 +5,16 @@ header/nav
 content by section
 forms
 footer
-mobile*/
+mobile
+
+BRAND COLORS
+#F2F4F4 - white
+#424045 - smoky gray
+#630716 - maroon
+#f4e1d9 - rose pink
+#708075 - eucalyptus green
+#cc9e63 - blazerod gold (hehe if you get this reference)
+*/
 
 /*-----------------------------------------------
 BODY
@@ -17,11 +26,22 @@ body,html{
   height:100%;
 }
 aside {
-    background: #1f8dd6; /* same color as selected state on site menu */
+    background: #1f8dd6;
     padding: 0.3em 1em;
     border-radius: 3px;
     color: #fff;
     margin-bottom: 2em;
+}
+h2 {
+  font-family:'Sudestada';
+}
+
+h3 {
+  font-family:'Radley',serif;
+
+}
+p{
+  font-family:'Radley',serif;
 }
 /*-----------------------------------------------
 SHeader/Navigation
@@ -62,6 +82,11 @@ Section 1 - Landing
 }
 
 .hero-text{
+  
+}
+.hero-text p {
+  font-family:"Sudestada";
+  font-size:200px;
   text-align:center;
   position:absolute;
   top:50%;
@@ -69,10 +94,39 @@ Section 1 - Landing
   transform: translate(-50%,-50%);
   color:white;
 }
-.hero-text p {
-  font-family:"Sudestada";
-  font-size:200px;
+/*-----------------------------------------------
+Section 2 - Info
+------------------------------------------------*/
+#section-two{
+  padding:10%;
+  background-color:#f4e1d9;
 }
+
+.section-two-image-wrap{
+  width:auto;
+}
+.section-two-image-wrap img{
+  max-width:100%;
+  height:auto;
+
+}
+
+#section-two h2{
+  font-size:6em;
+  color:#cc9e63;
+}
+
+#section-two h3{
+  color:#630716;
+}
+
+#section-two p{
+  color:#424045;
+}
+#section-two .desc-text{
+  vertical-align:bottom;
+}
+
 /*-----------------------------------------------
 Section 3 - RSVP form
 ------------------------------------------------*/
@@ -81,7 +135,7 @@ textarea {
 }
 .content-head {
   font-weight: 400;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   letter-spacing: 0.1em;
   margin: 2em 0 1em;
 }
@@ -102,6 +156,10 @@ button {
 }
 #name, #email {
   width: 50%;
+}
+#section-three label{
+  text-transform:uppercase;
+  font-family:'Radley',serif;
 }
 /*.honeypot-field {
   display: none;
