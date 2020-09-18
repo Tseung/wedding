@@ -6,18 +6,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="contact form example">
 	<title>Home</title>
+	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<!-- Style The Contact Form How Ever You Prefer -->
 	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<!--fonts-->
 	<link rel="stylesheet" href="https://use.typekit.net/uvy1pco.css">
 	<link href="https://fonts.googleapis.com/css2?family=Radley&display=swap" rel="stylesheet">
+	<!--overriding stylesheet + script-->
 	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+
 	
 	<!-- GSC Verification -->
 	<meta name="google-site-verification" content="Rgvla4kcPc38VjOps28HAAreQeMQy1yjQVy3Tu-6Qb8" />
@@ -25,8 +29,8 @@
 </head>
 
 <body>
-		<div class="navbar-wrap">
-			<nav class="navbar navbar-expand-lg fixed-top navbar-light">
+		<div class="navbar-wrap fixed-top">
+			<nav class="navbar navbar-expand-lg navbar-light">
 				<a class = "navbar-brand" href="#">
 					<!--insert image here-->
 					<img src="">
@@ -69,6 +73,7 @@
 		</div>
 	</div>
 	<!--we're getting married!-->
+<div class="content">
 	<div id="section-two" class="wrap">
 		<div class="inner-wrap">
 			<div class="container">
@@ -96,10 +101,11 @@
 		</div>
 	</div>
 	<!--https://script.google.com/macros/s/AKfycbwQxVxgrNPqAzP7YIaATJbylIUjgIx-sDuqw_ps/exec -->
-	<h2 class="content-head is-center">r.s.v.p.</h2>
-	<p>Kindly Respond by January 21, 2021</p>
+	
 	<!-- rsvp form -->
 	<div id= section-three class=wrap>
+		<h2 class="content-head is-center">r.s.v.p.</h2>
+		<p>Kindly Respond by January 21, 2021</p>
 		<form class="gform pure-form" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbxbOF1cxRbqN4VFjmZXHLKBMA0k2t9CSZaAF298RQ/exec">
 			<!-- change the form action to your script url -->
 			<div class="form-elements">
@@ -135,6 +141,7 @@
 		<script data-cfasync="false" src="form-submission-handler.js"></script>
 		<!-- END -->
 	</div>
+</div><!--end content-->
 			<div class="copywrite">
 				<div class="copywrite-content">
 					<p>Created by Sarah and Rachel Tse &#169; 2020</p>

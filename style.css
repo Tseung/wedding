@@ -21,6 +21,7 @@ BODY
 ------------------------------------------------*/
 body {
 /*  margin: 2em;*/
+background-color: #f4e1d9;
 }
 body,html{
   height:100%;
@@ -64,11 +65,18 @@ SHeader/Navigation
   display:block;
   text-align:center;
 }*/
-.fixed-top{
-    height: 120px;
-    background-color: none!important;
-    width: 90%;
-    margin:  0 auto;
+.navbar-wrap.fixed-top{
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar-wrap.fixed-top .navbar{
+  width: 90%;
+  margin:0 auto;
+  padding-right: 0;
+  padding-left:0;
 }
 .navbar-light .navbar-nav .nav-link{
     font-size: 1.1em;
@@ -77,8 +85,48 @@ SHeader/Navigation
     transition: all 300ms
 }
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
-    opacity: 0.6;
     color: #fff;
+}
+.navbar-light .navbar-nav .nav-link:hover::after{
+  opacity:1;
+}
+.navbar-light .navbar-nav .nav-link::after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #cc9e63;
+    display: block;
+    margin-top: 2px;
+    opacity: 0;
+    transition: all 300ms;
+}
+.nav-item:last-child {
+    padding-right: 0;
+}
+a.navbar-brand {
+    background-image: url('images/tseung-logo.svg');
+    background-repeat: no-repeat;
+    min-height: 70px;
+    height: auto;
+    width: 100px;
+    max-width: 100%;
+    transition: all 300ms;
+}
+.navbar-wrap.fixed-top.scroll {
+    background: rgba(255,255,255,1);
+    height: 80px;
+    transition: all 300ms;
+    -webkit-box-shadow: 0px 4px 15px 0px rgba(66,64,69,0.5);
+-moz-box-shadow: 0px 4px 15px 0px rgba(66,64,69,0.5);
+box-shadow: 0px 4px 15px 0px rgba(66,64,69,0.5);
+}
+.scroll .navbar-light .navbar-nav .nav-link{
+    color: #434146;
+    font-size:1em;
+}
+.scroll a.navbar-brand {
+    background-image: url('images/tseung-logo-gold.svg');
+    min-height: 50px;
 }
 /*-----------------------------------------------
 Section 1 - Landing
@@ -131,8 +179,9 @@ Section 1 - Landing
 Section 2 - Info
 ------------------------------------------------*/
 #section-two{
-  padding:10%;
-  background-color:#f4e1d9;
+  padding: 10% 0;
+/*  width: 90%;*/
+  margin: 0 auto;
 }
 
 .section-two-image-wrap{
@@ -205,11 +254,40 @@ button {
 /*.honeypot-field {
   display: none;
 }*/
+#section-three{
+    width: 75%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 5% 10%;
+}
+#section-three form .form-elements{
+    display:flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+}
+#section-three .pure-form fieldset{
+    width: 100%;
+}
 
 /*-----------------------------------------------
 Footer
 ------------------------------------------------*/
-
+.copywrite {
+    background: #424045;
+}
+.copywrite-content{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding: 16px 0;
+}
+.copywrite p{
+    margin:0;
+    color:#fff;
+    opacity: 0.5;
+    text-transform: lowercase;
+}
 /*-----------------------------------------------
 Mobile
 ------------------------------------------------*/
