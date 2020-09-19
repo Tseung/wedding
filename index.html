@@ -72,82 +72,78 @@
 			</div>
 		</div>
 	</div>
-	<!--we're getting married!-->
-<div class="content">
-	<div id="section-two" class="wrap">
-		<div class="inner-wrap">
+	<div id="section-two">
 			<div class="container">
-				<div class="row">
-					<div class = "col-5">
+				<div class="row align-items-end justify-content-between">
+					<div class="col-12"><h1 style="display:none;">Zephaniah &amp; Hester Seung Wedding</h1></div>
+					<div class= "col-lg-5 col-md-6 col-sm-12">
 						<div class = "section-two-image-wrap">
 							<img src='images/pinkivywall.JPG' alt-text="wedding picture">
 						</div>
 					</div>
-					<div class = "col-7 desc-text">
+					<div class = "col-lg-6 col-md-6 col-sm-12 desc-text">
 						<h2>we're getting married</h2>
-						<h3>FEBRUARY 13, 2021</h3>
-						<h3>FROM 4-10 PM AT THE GRAND IVORY</h3>
+						<h3>FEBRUARY 13, 2021<br />
+						FROM 4-10 PM AT THE GRAND IVORY</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
 				</div>
 			</div>
-			
-			<!-- just commented out bc idk hehe<div class="left"> <img src='images\pinkivywall.jpg' alt-text="wedding picture">
-				<div class="rectangle"> </div>
-			</div>
-			<div class="right">
-				
-			</div>-->
-		</div>
 	</div>
 	<!--https://script.google.com/macros/s/AKfycbwQxVxgrNPqAzP7YIaATJbylIUjgIx-sDuqw_ps/exec -->
 	
 	<!-- rsvp form -->
-	<div id= section-three class=wrap>
-		<h2 class="content-head is-center">r.s.v.p.</h2>
-		<p>Kindly Respond by January 21, 2021</p>
-		<form class="gform pure-form" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbxbOF1cxRbqN4VFjmZXHLKBMA0k2t9CSZaAF298RQ/exec">
-			<!-- change the form action to your script url -->
-			<div class="form-elements">
-				<fieldset class="pure-group">
-					<label for="name">Name</label>
-					<input id="name" name="name" placeholder="" />
-
-					<label for="email"><em>Your</em> Email </label>
-					<input id="email" name="email" type="email" value="" required placeholder="xxx@email.com" />
-				</fieldset>
-				<fieldset class="pure-group">
-					<label for="rsvp">Number Attending (including yourself)</label>
-					<textarea id="rsvp" name="rsvp" rows="2" placeholder="Yes/No"></textarea>
-
-					<label for="dietary">Dietary Restrictions?</label>
-					<textarea id="dietary" name="dietary" type="dietary" placeholder="vegetarian, nut allergies, etc" value="" rows="4"></textarea>
-				</fieldset>
-				<fieldset class="pure-group">
-					<label for="song">Song Recommendation</label>
-					<textarea id="song" name="song" type="song" placeholder="Leave us a song recommendation for our DJ to play" value="" rows="4"></textarea>
-				</fieldset>
-				<fieldset class="pure-group honeypot-field" style="display: none;">
-					<label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
-					<input id="honeypot" type="text" name="honeypot" value="" /> </fieldset>
-				<button class="button-success pure-button button-xlarge"> <i class="fa fa-paper-plane"></i>&nbsp;Submit</button>
+	<div id= section-three>
+		<div class="container">
+			<div class="row is-center">
+				<h2 class="col-12">r.s.v.p.</h2>
+				<h3 class="col-12">Kindly Respond by January 21, 2021</h3>
 			</div>
-			<!-- Customise the Thankyou Message People See when they submit the form: -->
-			<div class="thankyou_message" style="display:none;">
-				<h2><em>Thanks</em> for contacting us!
-	        We will get back to you soon!</h2> </div>
-		</form>
-		<!-- Submit the Form to Google Using "AJAX" -->
-		<script data-cfasync="false" src="form-submission-handler.js"></script>
-		<!-- END -->
-	</div>
-</div><!--end content-->
-			<div class="copywrite">
-				<div class="copywrite-content">
-					<p>Created by Sarah and Rachel Tse &#169; 2020</p>
-					<p>need help? email tseungwedding@gmail.com</p>
+			<form class="gform pure-form" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbxbOF1cxRbqN4VFjmZXHLKBMA0k2t9CSZaAF298RQ/exec">
+				<!-- change the form action to your script url -->
+				<div class="form-elements row">
+					<div class="pure-group col-lg-6 col-sm-12">
+						<label for="name">Name</label>
+						<input id="name" name="name" placeholder="" />
+					</div>
+					<div class="pure-group col-lg-6 col-sm-12">
+						<label for="email">Email </label>
+						<input id="email" name="email" type="email" value="" required placeholder="xxx@email.com" />
+					</div>
+					<div class="pure-group col-lg-4 col-sm-12">
+						<label for="rsvp">Number Attending<br />(including yourself)</label>
+						<input id="rsvp" name="rsvp" type="number" placeholder="1, 2, etc."></input>
+					</div>
+					<div class="pure-group col-lg-8 col-sm-12">
+						<label for="dietary">Dietary Restrictions?</label>
+						<input id="dietary" name="dietary" type="dietary" placeholder="vegetarian, nut allergies, etc" value=""></input>
+					</div>
+					<div class="pure-group col-lg-12">
+						<label for="song">Song Recommendation</label>
+						<input id="song" name="song" type="song" placeholder="Leave us a song recommendation for our DJ to play" value=""></input>
+					</div>
+					<div class="pure-group honeypot-field" style="display: none;">
+						<label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+						<input id="honeypot" type="text" name="honeypot" value="" /> </div>
+					<button class="primary-btn button-success pure-button button-xlarge col-lg-12"></i>&nbsp;Submit</button>
 				</div>
-			</div>
+				<!-- Customise the Thankyou Message People See when they submit the form: -->
+				<div class="thankyou_message" style="display:none;">
+					<h2><em>Thanks</em> for contacting us!
+		        We will get back to you soon!</h2> </div>
+			</form>
+			<!-- Submit the Form to Google Using "AJAX" -->
+			<script data-cfasync="false" src="form-submission-handler.js"></script>
+			<!-- END -->
+		</div><!--end container-->
+	</div><!--end section-three-->
+
+	<div class="copywrite container-fluid">
+		<div class="copywrite-content row justify-content-between">
+			<p class="col-lg-6 col-md-12">Created by Sarah and Rachel Tse &#169; 2020</p>
+			<p class="col-lg-6 col-md-12">need help? email tseungwedding@gmail.com</p>
+		</div>
+	</div>
 </body>
 
 </html>

@@ -33,19 +33,42 @@ aside {
     color: #fff;
     margin-bottom: 2em;
 }
+h1{
+  font-family:'Sudestada',Cursive;
+  color:#cc9e63;
+}
 h2 {
-  font-family:'Sudestada';
+  font-family:'Sudestada',Cursive;
+  color:#cc9e63;
+  font-size: 6em;
 }
 
 h3 {
-  font-family:'Radley',serif;
-
+  font-family:'Radley','Times New Roman',serif;
+  color:#630716;
+  font-size:1.75em;
+  text-transform: uppercase;
 }
-p{
-  font-family:'Radley',serif;
+body, p{
+  font-family:'Radley','Times New Roman',serif;
+  color:#424045;
+}
+.primary-btn{
+  text-transform: uppercase;
+  background: #cc9e63;
+  width: 100%;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+  text-shadow: 0 1px 2px rgba(99, 8, 23,0.5);
+  transition: all 300ms;
+}
+.primary-btn:hover {
+    box-shadow: -3px 4px 1px rgba(99, 8, 23,1);
+    background: #cc9e63;
 }
 /*-----------------------------------------------
-SHeader/Navigation
+Header/Navigation
 ------------------------------------------------*/
 .nav{
   overflow:hidden;
@@ -198,25 +221,6 @@ Section 2 - Info
     box-shadow: -35px 37px 0px 0px rgba(99,7,22,1);
 }
 
-#section-two h2{
-  font-size:6em;
-  color:#cc9e63;
-}
-
-#section-two h3{
-  color:#630716;
-}
-
-#section-two p{
-  color:#424045;
-}
-#section-two .desc-text{
-  vertical-align:bottom;
-}
-#section-two .row {
-    align-items: flex-end;
-}
-
 /*-----------------------------------------------
 Section 3 - RSVP form
 ------------------------------------------------*/
@@ -232,43 +236,73 @@ textarea {
 .is-center {
   text-align: center;
 }
-.button-success {
+/*.button-success {
   color: white;
   border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   background: rgb(28, 184, 65); /* this is a green */
-}
+}*/
 .button-xlarge {
   font-size: 125%;
 }
-button {
-  float: right;
-}
-#name, #email {
-  width: 50%;
-}
 #section-three label{
   text-transform:uppercase;
-  font-family:'Radley',serif;
 }
 /*.honeypot-field {
   display: none;
 }*/
-#section-three{
-    width: 75%;
-    margin: 0 auto;
+#section-three .container{
     background: #fff;
     padding: 5% 10%;
 }
-#section-three form .form-elements{
-    display:flex;
-    flex-flow: row wrap;
-    margin: 0 auto;
+.pure-group{
+   display:flex;
+   margin-bottom: 32px;
+   align-items: flex-end;
 }
-#section-three .pure-form fieldset{
+.pure-form label{
+    display:flex;
+    align-items: flex-end;
+    margin-right: 12px;
+    margin-bottom: 0;
+}
+.pure-form fieldset {
+    display: flex;
     width: 100%;
 }
-
+.pure-form .pure-group input:last-child, .pure-form .pure-group textarea:last-child{
+    box-shadow: none;
+    top: unset;
+    border-radius: 0px;
+    flex:1;
+    border: none;
+    border-bottom: 1px solid #424045;
+    padding: 0;
+    font-family: 'Radley', 'Helvetica', sans-serif;
+    max-height: 31px;
+}
+input:focus {
+    outline:none;
+}
+.pure-group.col-lg-4.col-sm-12 label {
+    flex: 2;
+}
+#rsvp {
+    flex: unset;
+    width: 25%;
+}
+#section-three > div:first-of-type > .row {
+    margin-bottom: 32px;
+}
+#section-three > div:first-of-type > .row h3{
+    font-size: 1.25em;
+}
+.primary-btn.button-success{
+    max-width: 160px;
+    margin: 0 auto;
+    border-radius: 1px;
+    margin-top: 16px;
+}
 /*-----------------------------------------------
 Footer
 ------------------------------------------------*/
@@ -276,10 +310,6 @@ Footer
     background: #424045;
 }
 .copywrite-content{
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
     padding: 16px 0;
 }
 .copywrite p{
@@ -288,10 +318,40 @@ Footer
     opacity: 0.5;
     text-transform: lowercase;
 }
+.copywrite p:nth-child(2){
+  text-align:right;
+}
 /*-----------------------------------------------
 Mobile
 ------------------------------------------------*/
+@media only screen and (min-width: 1400px){
+  .container{
+    max-width: 1280px;
+  }
+  #section-three .container{
+    max-width: 1140px;
+    padding: 5% 6%;
+  }
+}
+@media only screen and (max-width: 1400px){
+  h2{
+        font-size: 5em;
+    }
+    h3{
+        font-size: 1.5em;
+    }
+     .pure-group.col-lg-4.col-sm-12 label {
+        flex: unset;
+        width: 100%;
+    }
+}
 @media only screen and (max-width: 1200px){
+    h2{
+        font-size: 4em;
+    }
+    h3{
+        font-size: 1.25em;
+    }
     .hero-text p{
         font-size: 9em;
         height: 150px;
@@ -302,18 +362,83 @@ Mobile
     .navbar-light .navbar-nav .nav-link{
         font-size: 0.8em;
     }
+     label {
+        font-size: 0.85em;
+    }
 }
 @media only screen and (max-width: 990px){
-    .hero-text{
-        max-width: 500px;
+  h2{
+        font-size: 3em;
+    }
+  .hero-text{
+    max-width: 500px;
+  }
+  .copywrite p:nth-child{
+    text-align:center;
+  }
+   .pure-group.col-lg-4.col-sm-12 label {
+        width: auto;
+    }
+    #rsvp {
+        flex: 1;
+        width:auto;
     }
 }
 @media only screen and (max-width: 768px){
-
+  h2{
+        font-size: 4.25em;
+    }
+    .container{
+        padding: 0 40px;
+    }
+    .section-two-image-wrap img{
+        -webkit-box-shadow: -12px 12px 0px 0px rgba(99,7,22,1);
+        -moz-box-shadow: -12px 12px 0px 0px rgba(99,7,22,1);
+        box-shadow: -12px 12px 0px 0px rgba(99,7,22,1);
+    }
+  #section-two .col-lg-5{
+      order:2;
+    }
+    .pure-group{
+        flex-wrap: wrap;
+    }
+    .pure-group.col-lg-4.col-sm-12 label, .pure-group label{
+        width: 100%;
+    }
+    .pure-group.col-lg-4.col-sm-12 label br{
+        display: none;
+    }
 }
 @media only screen and (max-width: 600px){
+  .hero-text p{
+        font-size: 7em;
+        position: absolute;
+        transform: translate(-50%,-50%) rotate(352deg);
+    }
+    .hero-text > p:first-child{
+        top: 0;
+        left: 50%;
+    }
+    .hero-text > p:nth-child(2){
+        top: 50%;
+        left: 50%;
+    }
+    .hero-text > p:nth-child(3){
+        top: 100%;
+        left: 50%;
+    }
+    .hero-text{
+        max-width: 400px;
+        height: 250px;
+        position:relative;
+    }
+    #section-three{
+        padding: 0 32px;
 
+    }
 }
 @media only screen and (max-width: 500px){
-
+  h2{
+      font-size: 3rem;
+  } 
 }
