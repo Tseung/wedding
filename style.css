@@ -67,6 +67,9 @@ body, p{
     box-shadow: -3px 4px 1px rgba(99, 8, 23,1);
     background: #cc9e63;
 }
+button:focus, button:active{
+    outline: none;
+}
 /*-----------------------------------------------
 Header/Navigation
 ------------------------------------------------*/
@@ -98,22 +101,21 @@ Header/Navigation
 .navbar-wrap.fixed-top .navbar{
   width: 90%;
   margin:0 auto;
-  padding-right: 0;
-  padding-left:0;
+  padding: 13px 0;
 }
-.navbar-light .navbar-nav .nav-link{
+/*.navbar-light*/ .navbar-nav .nav-link{
     font-size: 1.1em;
     color: #fff;
     letter-spacing: 2px;
     transition: all 300ms
 }
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+/*.navbar-light*/ .navbar-nav .nav-link:focus, /*.navbar-light*/ .navbar-nav .nav-link:hover{
     color: #fff;
 }
-.navbar-light .navbar-nav .nav-link:hover::after{
+/*.navbar-light*/ .navbar-nav .nav-link:hover::after{
   opacity:1;
 }
-.navbar-light .navbar-nav .nav-link::after{
+/*.navbar-light*/ .navbar-nav .nav-link::after{
     content: '';
     height: 2px;
     width: 100%;
@@ -143,13 +145,16 @@ a.navbar-brand {
 -moz-box-shadow: 0px 4px 15px 0px rgba(66,64,69,0.5);
 box-shadow: 0px 4px 15px 0px rgba(66,64,69,0.5);
 }
-.scroll .navbar-light .navbar-nav .nav-link{
+.scroll /*.navbar-light*/ .navbar-nav .nav-link{
     color: #434146;
     font-size:1em;
 }
 .scroll a.navbar-brand {
     background-image: url('images/tseung-logo-gold.svg');
     min-height: 50px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,1);
 }
 /*-----------------------------------------------
 Section 1 - Landing
@@ -359,9 +364,9 @@ Mobile
     .hero-text{
         max-width: 600px;
     }
-    .navbar-light .navbar-nav .nav-link{
+/*    .navbar-nav .nav-link{
         font-size: 0.8em;
-    }
+    }*/
      label {
         font-size: 0.85em;
     }
@@ -382,6 +387,35 @@ Mobile
     #rsvp {
         flex: 1;
         width:auto;
+    }
+    .navbar-wrap.fixed-top {
+    width:auto;
+    height: auto;
+    width: 100%;
+    display: block;
+/*    padding: 0 40px;*/
+  }
+  .navbar-wrap.fixed-top .navbar{
+        width: 100%;
+    }
+    .nav-logo-button-wrap {
+        width: 100%;
+        padding: 0 40px;
+        position:relative;
+    }
+    /*.navbar-light */.navbar-toggler{
+        transform: translate(-50%,-50%);
+        top: 50%;
+        right: 0;
+        position: absolute;
+    }
+    .navbar-collapse ul{
+        padding: 16px 32px 16px 32px;
+        
+    }
+    .scroll .navbar-collapse ul{
+        border-top: #dfdfdf solid 1px;
+        background: #fff;
     }
 }
 @media only screen and (max-width: 768px){

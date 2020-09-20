@@ -6,9 +6,13 @@ $( document ).ready(function() {
       //when you scroll, add scroll class
       if (st > lastScrollTop){
           $('.fixed-top').addClass('scroll');
+          $('.navbar').addClass('navbar-light');
+          $('.navbar').removeClass('navbar-dark');
       } else {
          //when you scroll back to top, remove scroll class
          $('.fixed-top').removeClass('scroll');
+         $('.navbar').removeClass('navbar-light');
+          $('.navbar').addClass('navbar-dark');
          lastScrollTop = st;
       }
       
