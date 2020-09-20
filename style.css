@@ -207,7 +207,7 @@ Section 1 - Landing
 Section 2 - Info
 ------------------------------------------------*/
 #section-two{
-  padding: 10% 0;
+  padding: 60px 0 100px;
 /*  width: 90%;*/
   margin: 0 auto;
 }
@@ -318,6 +318,7 @@ Footer
     padding: 16px 0;
 }
 .copywrite p{
+  font-size: 12px;
     margin:0;
     color:#fff;
     opacity: 0.5;
@@ -325,6 +326,9 @@ Footer
 }
 .copywrite p:nth-child(2){
   text-align:right;
+}
+.copywrite p a{
+    color:#fff;
 }
 /*-----------------------------------------------
 Mobile
@@ -417,6 +421,12 @@ Mobile
         border-top: #dfdfdf solid 1px;
         background: #fff;
     }
+    .copywrite p:nth-child(2), .copywrite p{
+      text-align:center;
+    }
+    .copywrite-content {
+    padding: 10px 0;
+}
 }
 @media only screen and (max-width: 768px){
   h2{
@@ -433,6 +443,9 @@ Mobile
   #section-two .col-lg-5{
       order:2;
     }
+    #section-two{
+      padding: 60px 0 80px;
+    }
     .pure-group{
         flex-wrap: wrap;
     }
@@ -442,6 +455,9 @@ Mobile
     .pure-group.col-lg-4.col-sm-12 label br{
         display: none;
     }
+    .desc-text {
+      margin-bottom: 32px;
+  }
 }
 @media only screen and (max-width: 600px){
   .hero-text p{
