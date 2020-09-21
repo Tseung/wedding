@@ -309,6 +309,23 @@ input:focus {
     margin-top: 16px;
 }
 /*-----------------------------------------------
+Wedding Party - Bridal Party
+------------------------------------------------*/
+.profile-img{
+
+}
+.profile-name{
+  font-family:'Radley','Times New Roman',serif;
+  color:#630716;
+  font-size:1.75em;
+  text-transform: uppercase;
+}
+.met-blob{
+  font-family:'Radley','Times New Roman',serif;
+  color:#424045;
+  font-size:1em;
+}
+/*-----------------------------------------------
 Footer
 ------------------------------------------------*/
 .copywrite {
