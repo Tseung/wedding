@@ -326,6 +326,19 @@ Wedding Party - Bridal Party
   font-size:1em;
 }
 /*-----------------------------------------------
+gift registry
+------------------------------------------------*/
+.gifts-header{
+  font-size:13em;
+  font-family:'Sudestada';
+  color:#cc9e63;
+  text-align: center;
+  padding:.5em 0 0 0;
+}
+.gifts-text{
+
+}
+/*-----------------------------------------------
 Footer
 ------------------------------------------------*/
 .copywrite {
