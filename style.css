@@ -129,7 +129,7 @@ Header/Navigation
     padding-right: 0;
 }
 a.navbar-brand {
-    background-image: url('images/tseung-logo.svg');
+    background-image: url('images/tseung-logo-h-white.png');
     background-repeat: no-repeat;
     min-height: 70px;
     height: auto;
@@ -150,20 +150,20 @@ box-shadow: 0px 4px 15px 0px rgba(66,64,69,0.5);
     font-size:1em;
 }
 .scroll a.navbar-brand {
-    background-image: url('images/tseung-logo-gold.svg');
+    background-image: url('images/tseung-logo-h-gold.png');
     min-height: 50px;
 }
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255,255,255,1);
 }
 /*-----------------------------------------------
-Section 1 - Landing
+Section 1 - Homepage Hero
 ------------------------------------------------*/
 #section-one {
   height:100%;
 }
 #section-one .home-hero{
-  background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/tseung-proposal-6.jpg");
+  background-image:linear-gradient(rgba(66, 64, 69,0.5), rgba(66, 64, 69,0.5)), url("images/tseung-proposal-6.jpg");
   height:50%;
 
   background-position:top center;
@@ -181,7 +181,7 @@ Section 1 - Landing
   flex-flow: row wrap;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 53%;
+  top: 50%;
   left: 50%;
 }
 .hero-text p {
@@ -250,13 +250,14 @@ textarea {
 .button-xlarge {
   font-size: 125%;
 }
-#section-three label{
+#section-three.wcard label{
   text-transform:uppercase;
 }
 /*.honeypot-field {
   display: none;
 }*/
-#section-three .container{
+#section-three.wcard .container,
+.wcard .container{
     background: #fff;
     padding: 5% 10%;
 }
@@ -270,6 +271,9 @@ textarea {
     align-items: flex-end;
     margin-right: 12px;
     margin-bottom: 0;
+    font-size: 0.9em;
+    color: #706e75;
+    text-transform:uppercase;
 }
 .pure-form fieldset {
     display: flex;
@@ -284,6 +288,7 @@ textarea {
     border-bottom: 1px solid #424045;
     padding: 0;
     font-family: 'Radley', 'Helvetica', sans-serif;
+    color: #646169;
     max-height: 31px;
 }
 input:focus {
@@ -296,10 +301,10 @@ input:focus {
     flex: unset;
     width: 25%;
 }
-#section-three > div:first-of-type > .row {
+#section-three.wcard > div:first-of-type > .row {
     margin-bottom: 32px;
 }
-#section-three > div:first-of-type > .row h3{
+#section-three.wcard > div:first-of-type > .row h3{
     font-size: 1.25em;
 }
 .primary-btn.button-success{
@@ -308,12 +313,13 @@ input:focus {
     border-radius: 1px;
     margin-top: 16px;
 }
+.pure-form .pure-group input:last-child::placeholder, 
+.pure-form .pure-group textarea:last-child::placeholder {
+    color: #bbb8c5;
+}
 /*-----------------------------------------------
 Wedding Party - Bridal Party
 ------------------------------------------------*/
-.profile-img{
-
-}
 .profile-name{
   font-family:'Radley','Times New Roman',serif;
   color:#630716;
@@ -326,17 +332,81 @@ Wedding Party - Bridal Party
   font-size:1em;
 }
 /*-----------------------------------------------
-gift registry
+Hero Section
 ------------------------------------------------*/
-.gifts-header{
-  font-size:13em;
-  font-family:'Sudestada';
-  color:#cc9e63;
-  text-align: center;
-  padding:.5em 0 0 0;
+#gifts .hero{
+    background-image:linear-gradient(rgba(66, 64, 69,0.5), rgba(66, 64, 69,0.5)), url('https://tseung.github.io/wedding/images/gifts.png');
 }
-.gifts-text{
+.hero {
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 
+.hero .inner-wrap{
+    width:inherit;
+    height: inherit;
+    position: relative;
+}
+.hero h1{
+    margin:0;
+    font-size: 10em;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 60%;
+    left: 50%;
+    color: #fff;
+    text-shadow: 2px 2px 12px rgba(181, 138, 85,0.2);
+}
+/*-----------------------------------------------
+Content Section
+------------------------------------------------*/
+.content {
+    min-height: 380px;
+    padding-top: 40px;
+}
+.content h2 {
+    font-family: 'Radley','Times New Roman',serif;
+    color: #630716;
+    font-size: 1.75em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+.wcard .container{
+  max-width: 1280px;
+  padding: 5% 6%;
+}
+#gifts .container{
+    margin-bottom: 32px;
+}
+.gift-option{
+    background: #fff;
+    display:flex;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+    flex: 0 0 23.5%;
+    padding: 40px 20px;
+}
+a{
+    transition: all 300ms;
+}
+.gift-option > *{
+    width: 100%;
+    margin-bottom: 0px;
+}
+.gift-option p, .gift-option a{
+    color: #424045;
+     text-decoration: none;
+}
+a.gift-option:hover{
+    background: #630716;
+    text-decoration: none;
+}
+a.gift-option:hover p,
+a.gift-option:hover h3{
+    color: #fff;
 }
 /*-----------------------------------------------
 Footer
@@ -367,7 +437,7 @@ Mobile
   .container{
     max-width: 1280px;
   }
-  #section-three .container{
+  #section-three.wcard .container,{
     max-width: 1140px;
     padding: 5% 6%;
   }
@@ -457,6 +527,7 @@ Mobile
     .copywrite-content {
     padding: 10px 0;
 }
+  .gift-option{flex: 0 0 48.5%;}
 }
 @media only screen and (max-width: 768px){
   h2{
@@ -488,6 +559,7 @@ Mobile
     .desc-text {
       margin-bottom: 32px;
   }
+  .gift-option{flex: auto;}
 }
 @media only screen and (max-width: 600px){
   .hero-text p{
@@ -512,7 +584,7 @@ Mobile
         height: 250px;
         position:relative;
     }
-    #section-three{
+    #section-three.wcard{
         padding: 0 32px;
 
     }
