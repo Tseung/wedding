@@ -11,7 +11,7 @@ BRAND COLORS
 #F2F4F4 - white
 #424045 - smoky gray
 #630716 - maroon
-#f4e1d9 - rose pink
+#fff2ee - rose pink
 #708075 - eucalyptus green
 #cc9e63 - blazerod gold (hehe if you get this reference)
 */
@@ -21,7 +21,7 @@ BODY
 ------------------------------------------------*/
 body {
 /*  margin: 2em;*/
-background-color: #f4e1d9;
+background-color: #fff;
 }
 body,html{
   height:100%;
@@ -69,6 +69,14 @@ body, p{
 }
 button:focus, button:active{
     outline: none;
+}
+.container a{
+  text-decoration: underline;
+  color:#424045;
+  transition: all 300ms;
+}
+.container a:hover{
+  text-decoration: none;
 }
 /*-----------------------------------------------
 Header/Navigation
@@ -208,11 +216,13 @@ Section 1 - Homepage Hero
 Section 2 - Info
 ------------------------------------------------*/
 #section-two{
-  padding: 60px 0 100px;
+  padding: 60px 0 80px;
 /*  width: 90%;*/
   margin: 0 auto;
 }
-
+.section-two-image-wrap{
+    position: relative;
+}
 .section-two-image-wrap{
   width:auto;
 }
@@ -221,10 +231,17 @@ Section 2 - Info
   height:auto;
 
 }
-.section-two-image-wrap img {
-    -webkit-box-shadow: -20px 22px 0px 0px rgba(99,7,22,1);
-    -moz-box-shadow: -20px 22px 0px 0px rgba(99,7,22,1);
-    box-shadow: -35px 37px 0px 0px rgba(99,7,22,1);
+.section-two-image-wrap:after {
+    content: '';
+    position: absolute;
+    display:block;
+    background: #630716;
+    width: 300px;
+    height: 70%;
+    transform: translateY(-50%);
+    left: -50px;
+    top: 50%;
+    z-index: -1;
 }
 
 /*-----------------------------------------------
@@ -253,14 +270,6 @@ textarea {
 }
 #section-three.wcard label{
   text-transform:uppercase;
-}
-/*.honeypot-field {
-  display: none;
-}*/
-#section-three.wcard .container,
-.wcard .container{
-    background: #fff;
-    padding: 5% 10%;
 }
 .pure-group{
    display:flex;
@@ -292,6 +301,9 @@ textarea {
     color: #646169;
     max-height: 31px;
 }
+input{
+  background: none;
+}
 input:focus {
     outline:none;
 }
@@ -318,25 +330,47 @@ input:focus {
 .pure-form .pure-group textarea:last-child::placeholder {
     color: #bbb8c5;
 }
+#section-three{
+    position:relative;
+}
+#section-three.wcard .container, .wcard .container{
+    background: #fff2ee;
+    width: 90%;
+    padding: 3% 6%;
+}
+#section-three::before,
+#section-three::after{
+    content: '';
+    position: absolute;
+    display:block;
+    width: 400px;
+    height: 67%;
+    background-image:url('images/leaves-gold.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#section-three::before{
+    top: -25px;
+    background-position: -50px;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+#section-three::after{
+    right: 0;
+    bottom: 0;
+    -webkit-transform:scaleX(-1);
+    transform:scaleX(-1);
+    background-position: -90px;
+}
 /*-----------------------------------------------
 Wedding Party - Bridal Party
 ------------------------------------------------*/
-.profile-name{
-  font-family:'Radley','Times New Roman',serif;
-  color:#630716;
-  font-size:1.75em;
-  text-transform: uppercase;
-}
-.met-blob{
-  font-family:'Radley','Times New Roman',serif;
-  color:#424045;
-  font-size:1em;
-}
+
 /*-----------------------------------------------
 Hero Section
 ------------------------------------------------*/
 #gifts .hero{
-    background-image:linear-gradient(rgba(66, 64, 69,0.5), rgba(66, 64, 69,0.5)), url('https://tseung.github.io/wedding/images/gifts.png');
+    background-image:linear-gradient(rgba(66, 64, 69,0.5), rgba(66, 64, 69,0.5)), url('images/registry-hero.jpg');
 }
 .hero {
     width: 100%;
@@ -361,12 +395,19 @@ Hero Section
     color: #fff;
     text-shadow: 2px 2px 12px rgba(181, 138, 85,0.2);
 }
+#faq .hero{
+    background-image:linear-gradient(rgba(66, 64, 69,0.5), rgba(66, 64, 69,0.5)), url('images/faq-hero.jpg');
+}
+#wedding-party .hero{
+
+    background-image:linear-gradient(rgba(66, 64, 69,0.5), rgba(66, 64, 69,0.5)), url('images/party-hero.jpg');
+}
 /*-----------------------------------------------
 Content Section
 ------------------------------------------------*/
 .content {
     min-height: 380px;
-    padding-top: 40px;
+    padding-top: 6em;
 }
 .content h2 {
     font-family: 'Radley','Times New Roman',serif;
@@ -409,6 +450,192 @@ a.gift-option:hover p,
 a.gift-option:hover h3{
     color: #fff;
 }
+
+/*FAQ page*/
+.right-img::before,
+.left-img::before{
+    display:block;
+    content:'';
+    position: absolute;
+    width: 2px;
+    background: #cc9e63;
+    height: 500px;
+    top: -30px;
+    z-index:1;
+}
+.right-img .img-wrap::before,
+.left-img .img-wrap::before  {
+    display:block;
+    content:'';
+    width: 400px;
+    height: 500px;
+    background: #fff2ee;
+    position: absolute;
+    z-index: -1;
+    top: -40px;
+}
+.right-img::before{
+  right: 50px;
+}
+.right-img .img-wrap::before{
+  right: -40px;
+}
+.left-img::before{
+  right: auto;
+  left: 50px;
+}
+.left-img .img-wrap::before{
+    right: auto;
+    left: 37px;
+    width: 610px;
+    height: 360px;
+    bottom: -40px;
+    top: auto;
+}
+.container .img-wrap{
+  position:relative;
+}
+.container .img-wrap img{
+   width: 100%;
+}
+#faq .container > div{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+#faq .content > div:not(:last-child) .container{
+    margin-bottom: 120px;
+}
+#faq .container h2{
+    width: 100%;
+}
+.questions-box > div{
+    margin-bottom: 32px;
+}
+.question{
+    font-weight:bold;
+}
+.dark-roses-bkg{
+  background:#630716;
+}
+#faq .covid .container{
+   padding-top: 60px;
+    padding-bottom: 30px;
+}
+#faq .covid .container h2 {
+    color:#cc9e63;
+}
+
+#faq .covid p {
+    color:#f2f0f0;
+}
+#faq.covid p.question{
+    color:#F2F4F4;
+}
+.misc-faq .questions-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.misc-faq .questions-box > div{
+    width: 47%;
+}
+#faq .container .misc-faq h2{
+    background: #630716;
+    min-height: 290px;
+    padding: 30px;
+    width: 80%;
+    color: #f4f2f2f2;
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+#faq .covid .container{
+    min-height: 350px;
+}
+/*dark roses background*/
+.dark-roses-bkg{
+    position:relative
+}
+.dark-roses-bkg::before,
+.dark-roses-bkg::after {
+    content: '';
+    position: absolute;
+    display:block;
+    width: 410px;
+    height: 100%;
+    background-image:url('images/leaves-rose-opaque.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+.dark-roses-bkg::after{
+    right: 0;
+    top: 0;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.covid .container a{
+  color: #fff;
+}
+/* Wedding Party Page*/
+/*.profile-img{
+  margin-bottom: 32px;
+}*/
+.profile-img img {
+    max-width: 100%;
+}
+#wedding-party .row > div {
+    margin-bottom: 32px;
+}
+.profile-name{
+  color:#630716;
+  font-size:1.25em;
+  /*text-transform: uppercase;*/
+}
+.met-blob{
+  font-family:'Radley','Times New Roman',serif;
+  color:#424045;
+  font-size:1em;
+}
+.profile-info{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    background: #fff2ee;
+    padding: 16px;
+    padding-bottom: 10px;
+    margin-top: -32px;
+    border-bottom: solid 2px #cc9e63;
+}
+.profile-title {
+    background: #630716;
+    display: inline-block;
+    color: #fff;
+    padding: 2px 5px;
+    position: relative;
+}
+.profile-title::before,
+.profile-title::after{
+    content:'';
+    position: absolute;
+    right:-10px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-left: 10px solid #630716;
+    border-bottom: 14px solid transparent;
+}
+.profile-title::after{
+    top: auto;
+    bottom: 0;
+    border-top: 14px solid transparent;
+    border-bottom: 0px solid transparent;
+}
+.content > div:not(:last-child) .container{
+  margin-bottom: 64px;
+}
 /*-----------------------------------------------
 Footer
 ------------------------------------------------*/
@@ -431,6 +658,10 @@ Footer
 .copywrite p a{
     color:#fff;
 }
+#wedding-party .hero h1{
+    width: 90%;
+    text-align: center;
+}
 /*-----------------------------------------------
 Mobile
 ------------------------------------------------*/
@@ -440,25 +671,37 @@ Mobile
   }
   #section-three.wcard .container,{
     max-width: 1140px;
-    padding: 5% 6%;
+    /*padding: 5% 6%;*/
   }
+  
 }
 @media only screen and (max-width: 1400px){
-  h2{
+/*  h2{
         font-size: 5em;
-    }
+    }*/
     h3{
         font-size: 1.5em;
     }
-     .pure-group.col-lg-4.col-sm-12 label {
+    .pure-group.col-lg-4.col-sm-12 label {
         flex: unset;
         width: 100%;
     }
+    .left-img .img-wrap::before{
+        width: 550px;
+    }
+    #section-three::before,
+    #section-three::after{
+        opacity: 0.3;
+    }
+    #section-two h2 {
+    font-size: 4.25em;
+}
+    
 }
 @media only screen and (max-width: 1200px){
-    h2{
+/*    h2{
         font-size: 4em;
-    }
+    }*/
     h3{
         font-size: 1.25em;
     }
@@ -475,11 +718,45 @@ Mobile
      label {
         font-size: 0.85em;
     }
+    #faq .content > div:not(:last-child) .container {
+        margin-bottom: 90px;
+    }
+   #faq .container .left-img,
+    #faq .container .right-img{
+       order: 1;
+       margin-top: 32px;
+   }
+   .right-img .img-wrap::before{
+       top: -20px;
+   }
+   .left-img .img-wrap::before{
+       height: 320px;
+   }
+   .right-img::before,
+   .left-img::before{
+       height: 115%;
+   }
+   #faq .container .misc-faq h2{
+       min-height: auto;
+       background: none;
+       color: #630716;
+       padding: 0;
+   }
+}
+@media only screen and (max-width: 1100px){
+    .dark-roses-bkg::after{
+      display: none;
+    }
+    .dark-roses-bkg::before{
+      opacity: 0.4;
+      width: 100%;
+      background-size: contain;
+    }
 }
 @media only screen and (max-width: 990px){
-  h2{
+/*  h2{
         font-size: 3em;
-    }
+    }*/
   .hero-text{
     max-width: 500px;
   }
@@ -521,7 +798,11 @@ Mobile
     .scroll .navbar-collapse ul{
         border-top: #dfdfdf solid 1px;
         background: #fff;
+         -webkit-box-shadow: 3px 9px 15px -6px rgba(66,64,69,0.5);
+    -moz-box-shadow: 3px 9px 15px -6px rgba(66,64,69,0.5);
+    box-shadow: 3px 9px 15px -6px rgba(66,64,69,0.5);
     }
+
     .copywrite p:nth-child(2), .copywrite p{
       text-align:center;
     }
@@ -529,6 +810,14 @@ Mobile
     padding: 10px 0;
 }
   .gift-option{flex: 0 0 48.5%;}
+  #section-two .col-lg-5{
+    order: 2;
+  }
+  .section-two-image-wrap {
+        max-height: 500px;
+        overflow: hidden;
+        margin-top: 32px;
+    }
 }
 @media only screen and (max-width: 768px){
   h2{
@@ -536,14 +825,6 @@ Mobile
     }
     .container{
         padding: 0 40px;
-    }
-    .section-two-image-wrap img{
-        -webkit-box-shadow: -12px 12px 0px 0px rgba(99,7,22,1);
-        -moz-box-shadow: -12px 12px 0px 0px rgba(99,7,22,1);
-        box-shadow: -12px 12px 0px 0px rgba(99,7,22,1);
-    }
-  #section-two .col-lg-5{
-      order:2;
     }
     #section-two{
       padding: 60px 0 80px;
@@ -561,6 +842,33 @@ Mobile
       margin-bottom: 32px;
   }
   .gift-option{flex: auto;}
+   .right-img .img-wrap::before{
+       height: 320px;
+       top: -20px;
+   }
+   .left-img .img-wrap::before{
+       height: 320px;
+       width: 75%;
+       max-width: 400px;
+   }
+   .misc-faq .questions-box > div{
+       width: 100%;
+   }
+   #section-three::before,
+    #section-three::after{
+        opacity: 0.15;
+    }
+     .section-two-image-wrap {
+        max-height: none;
+        overflow: visible;
+        margin-top: 32px;
+    } 
+    #wedding-party .hero h1{
+        font-size: 8em;
+    } 
+       #faq .content > div:not(:last-child) .container {
+        margin-bottom: 64px;
+    }
 }
 @media only screen and (max-width: 600px){
   .hero-text p{
@@ -588,6 +896,37 @@ Mobile
     #section-three.wcard{
         padding: 0 32px;
 
+    }
+    .right-img .img-wrap::before,
+    .left-img .img-wrap::before,
+    .right-img::before, .left-img::before{
+       display: none;
+   }
+
+    #faq .container .left-img, #faq .container .right-img{
+        margin-top:0;
+    }
+     #section-three::before{
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        top: 0;
+        left: 0;
+        width: 90%;
+        max-width: 100%;
+        display: none;
+    }
+    #section-three::after{
+        display:none;
+    }
+    #section-three.wcard .container, .wcard .container{
+        width: 100%;
+        padding: 6%;
+    }
+    #section-three.wcard{
+        padding: 0;
+    }
+    #wedding-party .hero h1{
+        font-size: 6em;
     }
 }
 @media only screen and (max-width: 500px){
