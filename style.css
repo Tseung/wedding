@@ -636,6 +636,11 @@ a.gift-option:hover h3{
 .content > div:not(:last-child) .container{
   margin-bottom: 64px;
 }
+#wedding-party .hero h1,
+#faq .hero h1{
+    width: 90%;
+    text-align: center;
+}
 /*-----------------------------------------------
 Footer
 ------------------------------------------------*/
@@ -658,10 +663,7 @@ Footer
 .copywrite p a{
     color:#fff;
 }
-#wedding-party .hero h1{
-    width: 90%;
-    text-align: center;
-}
+
 /*-----------------------------------------------
 Mobile
 ------------------------------------------------*/
@@ -863,7 +865,8 @@ Mobile
         overflow: visible;
         margin-top: 32px;
     } 
-    #wedding-party .hero h1{
+    #wedding-party .hero h1,
+  #faq .hero h1{
         font-size: 8em;
     } 
        #faq .content > div:not(:last-child) .container {
@@ -925,7 +928,8 @@ Mobile
     #section-three.wcard{
         padding: 0;
     }
-    #wedding-party .hero h1{
+    #wedding-party .hero h1,
+  #faq .hero h1{
         font-size: 6em;
     }
 }
